@@ -3,7 +3,18 @@ const { resolve } = require('path');
 let cors = require('cors');
 const app = express();
 const port = 3000;
+
+
+const corsOptions = {
+  origin: 'https://bd-2-5-a2.vercel.app', 
+}
+
+app.use(cors(corsOptions));
 app.use(cors());
+
+
+
+
 let stocks = [
   {
     id: 1,
